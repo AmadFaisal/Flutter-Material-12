@@ -5,8 +5,9 @@ class BasicListview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ListView(
+    return Scaffold(
+      appBar: AppBar(title: Text('List View')),
+      body: ListView(
         children: [
           ListTile(
             title: Text("Baransel.dev"),

@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:rpl2/latihan3/LayoutProfile1.dart';
 import 'package:rpl2/latihan3/LayoutProfile2.dart';
@@ -5,11 +7,16 @@ import 'package:rpl2/latihan3/LayoutProfile3.dart';
 import 'package:rpl2/latihan3/latihan3.dart';
 import 'package:rpl2/latihan3/profile.dart';
 import 'package:rpl2/latihan3/LayoutSatu.dart';
+import 'package:rpl2/latihan3/LatihanStatus.dart';
+import 'package:rpl2/list_grid/grid_view/GridBuilder.dart';
+import 'package:rpl2/list_grid/grid_view/Gridbasic.dart';
 import 'package:rpl2/list_grid/listview/BasicListview.dart';
 import 'package:rpl2/list_grid/listview/BuilderListView.dart';
 import 'package:rpl2/list_grid/listview/ContohListView.dart';
 import 'package:rpl2/list_grid/listview/SeparatedListView.dart';
 import 'package:rpl2/list_grid/listview/simpleListView.dart';
+import 'package:rpl2/pages/homePage.dart';
+import 'package:rpl2/routes/app_routes.dart';
 
 // import 'package:rpl2/listview/simpleListView.dart';
 // import 'package:rpl2/latihan3/latihan3.dart';
@@ -35,17 +42,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter RPL 2 Apps',
       color: Colors.blue,
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        // appBar: AppBar(
-        //   title: Text(
-        //     'My First Flutter Apps',
-        //     style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-        //   ),
-        //   backgroundColor: Colors.orangeAccent,
-        //   centerTitle: true,
-        // ),
-        body: ContohListView(),
-      ),
+      initialRoute: AppRoutes.home,
+      routes: AppRoutes.routes,
     );
   }
 }
