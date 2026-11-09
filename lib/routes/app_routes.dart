@@ -6,6 +6,7 @@ import 'package:rpl2/list_grid/grid_view/Gridbasic.dart';
 import 'package:rpl2/list_grid/listview/BasicListview.dart';
 import 'package:rpl2/pages/aboutPage.dart';
 import 'package:rpl2/pages/homePage.dart';
+import 'package:rpl2/pages/input_page.dart';
 
 class AppRoutes {
   static const home = '/';
@@ -15,6 +16,7 @@ class AppRoutes {
   static const gridBuilder = '/gridbuilder';
   static const form = '/form';
   static const instagram = '/instagram';
+  static const inputForm   = '/input-form';
 
   static Map<String, WidgetBuilder> routes = {
     home: (context) => Homepage(),
@@ -24,5 +26,6 @@ class AppRoutes {
     gridBuilder: (context) => GridBuilderProduct(),
     form: (context) => Formpage(),
     instagram: (context) => LatihanStatus(),
+    inputForm:(context) => BelajarForm(),
   };
 }
