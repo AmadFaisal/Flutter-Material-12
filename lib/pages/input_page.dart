@@ -65,7 +65,7 @@ class _BelajarFormState extends State<BelajarForm> {
                           border: OutlineInputBorder(),
                         ),
                         validator: (value) {
-                          if (value!.isEmpty) return 'Input Nama';
+                          if (value!.isEmpty) return 'Masukan Nama...';
                           return null;
                         },
                       ),
@@ -115,7 +115,7 @@ class _BelajarFormState extends State<BelajarForm> {
                           child: Text(
                             _jkerror!,
                             style: TextStyle(
-                              color: const Color.fromARGB(255, 4, 118, 232),
+                              color: const Color.fromARGB(255, 157, 1, 6),
                             ),
                           ),
                         ),
@@ -128,7 +128,7 @@ class _BelajarFormState extends State<BelajarForm> {
                           border: OutlineInputBorder(),
                         ),
                         validator: (value) {
-                          if (value!.isEmpty) return 'Input Tanggal Lahir';
+                          if (value!.isEmpty) return 'Masukan Tanggal Lahir...';
                           return null;
                         },
                         readOnly: true,
@@ -169,7 +169,7 @@ class _BelajarFormState extends State<BelajarForm> {
                         },
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'Pilih Agama';
+                            return 'Pilih Agama...';
                           }
                           return null;
                         },

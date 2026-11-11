@@ -18,16 +18,38 @@ class OutputFormScreen extends StatelessWidget {
 	Widget build(BuildContext context) {
 		return Scaffold(
 			appBar: AppBar(title: const Text('Data Biodata')),
-			body: ListView(
-				padding: const EdgeInsets.all(16),
-				children: [
-					_DataRow(label: 'Nama', value: nama),
-					_DataRow(label: 'Jenis Kelamin', value: jk),
-					_DataRow(label: 'Tanggal Lahir', value: tglLahir),
-					_DataRow(label: 'Agama', value: agama),
-				],
-			),
-		);
+			body: SafeArea(
+        child: Card(
+          elevation: 4,
+            margin: EdgeInsets.all(16),
+            shape: RoundedRectangleBorder(
+              side: BorderSide(color: Colors.black),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Padding(
+              padding: EdgeInsets.all(24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(
+                    "Data Biodata",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 18),
+                  _DataRow(label: "Nama", value: nama),
+                  _DataRow(label: "Jenis Kelamin", value: jk),
+                  _DataRow(label: "Tanggal Lahir", value: tglLahir),
+                  _DataRow(label: "Agama", value: agama),
+                ],
+              ),
+            ),
+          ),
+        )
+      );
 	}
 }
 
