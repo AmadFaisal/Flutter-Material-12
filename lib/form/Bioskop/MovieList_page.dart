@@ -7,7 +7,7 @@ class CinemaApp extends StatelessWidget {
   @override
   Widget build(BuildContext me) {
     return MaterialApp(
-      title: 'CineStar Booking',
+      title: 'Cine-Stars Booking',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color(0xFF121212),
@@ -36,7 +36,7 @@ final List<Map<String, dynamic>> movieList = [
     'duration': '2j 49m',
     'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdtyBwYGFLJBoKQ8EbDpWeR9nQsasDv6MEWa6UGZEDJA&s=10',
     'banner': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdtyBwYGFLJBoKQ8EbDpWeR9nQsasDv6MEWa6UGZEDJA&s=10',
-    'synopsis': 'Paul Atreides bersatu dengan Chani dan suku Fremen untuk membalas dendam terhadap para konspirator.',
+    'synopsis': 'perjalanan sekelompok astronaut melintasi lubang cacing (wormhole) di dekat Saturnus untuk mencari planet baru yang layak huni bagi umat manusia.',
   },
   {
     'id': 'm2',
@@ -47,7 +47,7 @@ final List<Map<String, dynamic>> movieList = [
     'duration': '2j 22m',
     'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT20e7e6XB12gLax5Hx8ZNL97MTSR2cZbS8GIeeiwBz_g&s=10',
     'banner': 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&q=80',
-    'synopsis': 'Di kota masa depan yang dipenuhi neon, seorang hacker mencoba membongkar konspirasi terbesar korporasi maya.',
+    'synopsis': '• perjalanan hidup Forrest Gump (Tom Hanks), pria berhati tulus asal Alabama dengan IQ rendah yang secara tidak sengaja terlibat dalam berbagai peristiwa besar sejarah Amerika pada abad ke-20.',
   },
   {
     'id': 'm3',
@@ -80,7 +80,7 @@ final List<Map<String, dynamic>> movieList = [
     'duration': '2j 30m',
     'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd8xZ6cpNEli_U9Z421Nz9ux-rgtvt0TGBa1UYDk5ZEw&s=10',
     'banner': 'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=800&q=80',
-    'synopsis': 'Detektif bayangan melawan jaringan kejahatan yang terorganisir di kota metropolis yang kelam.',
+    'synopsis': 'Miles Morales kembali beraksi sebagai Spider-Man dan diajak oleh Gwen Stacy melintasi multiverse menuju markas besar Spider-Society yang berisi ratusan varian Spider-Man dari berbagai semesta.',
   },
   {
     'id': 'm6',
@@ -91,7 +91,7 @@ final List<Map<String, dynamic>> movieList = [
     'duration': '2j 30m',
     'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX2RgvTGKaMp3oB0aUkQwIp2APJ4r5kB6x6ku1TdD4Mg&s=10',
     'banner': 'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=800&q=80',
-    'synopsis': 'Detektif bayangan melawan jaringan kejahatan yang terorganisir di kota metropolis yang kelam.',
+    'synopsis': '• Kisah asal-usul (origin story) berlatar sepenuhnya di planet Cybertron yang menyoroti persahabatan awal antara dua robot pekerja tambang, Orion Pax dan D-16.',
   },
   {
     'id': 'm7',
@@ -102,7 +102,7 @@ final List<Map<String, dynamic>> movieList = [
     'duration': '2j 30m',
     'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYQ8FIEoXjsJzL4U0YuDlgEuVLeQ8IZ4dLfxppPCOOKg&s=10',
     'banner': 'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=800&q=80',
-    'synopsis': 'Detektif bayangan melawan jaringan kejahatan yang terorganisir di kota metropolis yang kelam.',
+    'synopsis': '• Makhluk raksasa misterius yang terus bermutasi dan memancarkan radiasi muncul dari Teluk Tokyo, menghancurkan kota dan memicu kepanikan nasional di Jepang.',
   },
   {
     'id': 'm8',

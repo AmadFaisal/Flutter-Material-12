@@ -52,7 +52,7 @@ class BookingDetailPage extends StatefulWidget {
 }
 
 class _BookingDetailPageState extends State<BookingDetailPage> {
-  List<String> selectedSeats = ['A1']; // Default pilih 1 kursi
+  List<String> selectedSeats = []; // Default pilih 1 kursi
   Map<String, int> snackQuantities = {};
   String selectedPaymentMethod = 'CASH'; // Options: 'QRIS', 'CASH'
   final TextEditingController cashInputController = TextEditingController();
@@ -300,7 +300,7 @@ class _BookingDetailPageState extends State<BookingDetailPage> {
                   Text(
                     selectedSeats.isEmpty
                         ? 'Belum Ada'
-                        : selectedSeats.join(', '),
+                        : selectedSeats.join(' '),
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Color(0xFFFFB400),
