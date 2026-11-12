@@ -10,7 +10,8 @@ import 'package:rpl2/pages/aboutPage.dart';
 import 'package:rpl2/pages/albumPage.dart';
 import 'package:rpl2/pages/homePage.dart';
 import 'package:rpl2/pages/input_page.dart';
-import 'package:rpl2/pages/post_page.dart'; // ie yeuh
+import 'package:rpl2/pages/post_page.dart';
+import 'package:rpl2/pages/userPage.dart'; // ie yeuh
 
 class AppRoutes {
   static const home = '/';
@@ -25,6 +26,7 @@ class AppRoutes {
   static const cinema = '/cinema-app';
   static const album = '/album';
   static const post = '/post-page';
+  static const user = '/user-page';
 
   static Map<String, WidgetBuilder> routes = {
     home: (context) => Homepage(),
@@ -39,5 +41,6 @@ class AppRoutes {
     cinema: (context) => CinemaApp(),
     album: (context) => AlbumPage(),
     post: (context) => PostPage(),
+    user: (context) => UserPage(),
   };
 }
