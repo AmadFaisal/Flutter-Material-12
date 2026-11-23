@@ -15,8 +15,11 @@ import 'package:rpl2/list_grid/listview/BuilderListView.dart';
 import 'package:rpl2/list_grid/listview/ContohListView.dart';
 import 'package:rpl2/list_grid/listview/SeparatedListView.dart';
 import 'package:rpl2/list_grid/listview/simpleListView.dart';
+import 'package:rpl2/pages/LoginPages.dart';
 import 'package:rpl2/pages/homePage.dart';
+import 'package:rpl2/pages/home_page.dart';
 import 'package:rpl2/routes/app_routes.dart';
+import 'package:rpl2/services/auth_service.dart';
 
 // import 'package:rpl2/listview/simpleListView.dart';
 // import 'package:rpl2/latihan3/latihan3.dart';
@@ -29,21 +32,40 @@ import 'package:rpl2/routes/app_routes.dart';
 // import 'package:rpl2/latihan/LatihanContainer.dart';
 // import 'package:rpl2/rowColumnWidget/RowWudget.dart';
 
-void main() {
-  runApp(MyApp());
+// void main() {
+//   runApp(MyApp());
+// }
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final token = await AuthService().getToken();
+  runApp(MyApp(isLoggedIn: token != null));
 }
 
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter RPL 2 Apps',
+//       color: Colors.blue,
+//       debugShowCheckedModeBanner: false,
+//       initialRoute: AppRoutes.home,
+//       routes: AppRoutes.routes,
+//     );
+//   }
+// }
+
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final bool isLoggedIn;
+  const MyApp({super.key, required this.isLoggedIn});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter RPL 2 Apps',
-      color: Colors.blue,
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.home,
-      routes: AppRoutes.routes,
+      home: isLoggedIn ? const HomePage() : const LoginPage(),
     );
   }
 }
