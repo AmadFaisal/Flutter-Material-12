@@ -56,7 +56,6 @@ class Profiletwit extends StatelessWidget {
                               size: 20,
                             ),
                           ),
-
                           SizedBox(width: 20),
 
                           Container(
