@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rpl2/pages/RegisterPage.dart';
+import 'package:rpl2/pages/article_list_page.dart';
+import 'package:rpl2/pages/homePage.dart';
 import 'package:rpl2/pages/home_page.dart';
 
 import '../services/api_exception.dart';
@@ -40,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
       if (!mounted) return;
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const HomePage()),
+        MaterialPageRoute(builder: (_) => const ArticleListPage()),
       );
     } on ApiException catch (e) {
       if (mounted) _showMessage(e.message);

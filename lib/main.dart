@@ -16,8 +16,9 @@ import 'package:rpl2/list_grid/listview/ContohListView.dart';
 import 'package:rpl2/list_grid/listview/SeparatedListView.dart';
 import 'package:rpl2/list_grid/listview/simpleListView.dart';
 import 'package:rpl2/pages/LoginPages.dart';
+import 'package:rpl2/pages/article_list_page.dart';
 import 'package:rpl2/pages/homePage.dart';
-import 'package:rpl2/pages/home_page.dart';
+// import 'package:rpl2/pages/home_page.dart';
 import 'package:rpl2/routes/app_routes.dart';
 import 'package:rpl2/services/auth_service.dart';
 
@@ -36,11 +37,11 @@ import 'package:rpl2/services/auth_service.dart';
 //   runApp(MyApp());
 // }
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  final token = await AuthService().getToken();
-  runApp(MyApp(isLoggedIn: token != null));
-}
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   final token = await AuthService().getToken();
+//   runApp(MyApp(isLoggedIn: token != null));
+// }
 
 // class MyApp extends StatelessWidget {
 //   const MyApp({super.key});
@@ -57,6 +58,51 @@ void main() async {
 //   }
 // }
 
+// class MyApp extends StatelessWidget {
+//   final bool isLoggedIn;
+//   const MyApp({super.key, required this.isLoggedIn});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: isLoggedIn ? const ArticleListPage() : const LoginPage(),
+//     );
+//   }
+// }
+
+// class HelloWidget extends StatelessWidget {
+//   const new({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Center(
+//       child: Text(
+//         "Hello, World!",
+//         style: TextStyle(
+//           fontSize: 20,
+//           fontWeight: FontWeight.bold,
+//           backgroundColor: Colors.orangeAccent,
+//           color: Colors.black,
+//           fontStyle: FontStyle.italic,
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+
+import 'package:flutter/material.dart';
+import 'pages/article_list_page.dart';
+// import 'pages/login_page.dart';
+import 'services/auth_service.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final token = await AuthService().getToken();
+  runApp(MyApp(isLoggedIn: token != null));
+}
+
 class MyApp extends StatelessWidget {
   final bool isLoggedIn;
   const MyApp({super.key, required this.isLoggedIn});
@@ -65,27 +111,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: isLoggedIn ? const HomePage() : const LoginPage(),
-    );
-  }
-}
-
-class HelloWidget extends StatelessWidget {
-  const new({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        "Hello, World!",
-        style: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          backgroundColor: Colors.orangeAccent,
-          color: Colors.black,
-          fontStyle: FontStyle.italic,
-        ),
-      ),
+      home: isLoggedIn ? const ArticleListPage() : const LoginPage(),
     );
   }
 }
